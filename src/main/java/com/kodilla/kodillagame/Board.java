@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 public class Board {
     private CheckerType[][] board;
+
     private Player whosTurn = Player.USER;
 
     public Board() {
