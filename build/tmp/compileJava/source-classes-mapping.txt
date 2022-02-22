@@ -1,0 +1,14 @@
+com/kodilla/kodillagame/CheckerType.java
+ com.kodilla.kodillagame.CheckerType
+ com.kodilla.kodillagame.CheckerType$1
+com/kodilla/kodillagame/CheckerMove.java
+ com.kodilla.kodillagame.CheckerMove
+com/kodilla/kodillagame/Player.java
+ com.kodilla.kodillagame.Player
+ com.kodilla.kodillagame.Player$1
+com/kodilla/kodillagame/Checker.java
+ com.kodilla.kodillagame.Checker
+com/kodilla/kodillagame/Board.java
+ com.kodilla.kodillagame.Board
+com/kodilla/kodillagame/Checkers.java
+ com.kodilla.kodillagame.Checkers

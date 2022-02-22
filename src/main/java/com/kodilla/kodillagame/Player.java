@@ -1,5 +1,6 @@
 package com.kodilla.kodillagame;
 
+
 public enum Player {
     USER, COMPUTER;
 

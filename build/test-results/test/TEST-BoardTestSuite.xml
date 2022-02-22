@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="BoardTestSuite" tests="9" skipped="0" failures="0" errors="0" timestamp="2022-02-18T15:14:18" hostname="LAPTOP-QTELFS6Q" time="0.053">
+  <properties/>
+  <testcase name="testMakeMoveKing" classname="BoardTestSuite" time="0.027"/>
+  <testcase name="testGetPossibleMovesForBlackChecker" classname="BoardTestSuite" time="0.01"/>
+  <testcase name="testGetPossibleMovesForBlackKing" classname="BoardTestSuite" time="0.002"/>
+  <testcase name="testMove1" classname="BoardTestSuite" time="0.002"/>
+  <testcase name="testMakeMoveV2" classname="BoardTestSuite" time="0.003"/>
+  <testcase name="testGetPossibleMovesForWhiteChecker" classname="BoardTestSuite" time="0.002"/>
+  <testcase name="testGetPossibleMovesForWhiteKing" classname="BoardTestSuite" time="0.002"/>
+  <testcase name="testCheckIfMoveIsPossible" classname="BoardTestSuite" time="0.004"/>
+  <testcase name="testSetFigures" classname="BoardTestSuite" time="0.001"/>
+  <system-out><![CDATA[--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|wP|  |wP|  |  |  |  |  |
+|  |bK|  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|wP|  |wP|  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |bP|  |  |  |  |  |  |
+|wP|  |wP|  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+Move: Normal moves
+Move: Jump moves
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |bK|  |  |  |  |
+|  |  |wP|  |wP|  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|bP|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|bP|  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|wP|  |wP|  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |bP|  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|wP|  |wP|  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |bK|
+--------------------------
+
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |bP|  |bP|  |  |
+|  |  |  |  |wP|  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+Move: Normal moves
+Move: Jump moves
+--------------------------
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |wK|  |  |  |  |
+|  |  |bP|  |bP|  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+--------------------------
+
+Move: Normal moves
+Move: Jump moves
+Move possible: true
+--------------------------
+|  |bP|  |bP|  |bP|  |bP|
+|bP|  |bP|  |bP|  |bP|  |
+|  |bP|  |bP|  |bP|  |bP|
+|  |  |  |  |  |  |  |  |
+|  |  |  |  |  |  |  |  |
+|wP|  |wP|  |wP|  |wP|  |
+|  |wP|  |wP|  |wP|  |wP|
+|wP|  |wP|  |wP|  |wP|  |
+--------------------------
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

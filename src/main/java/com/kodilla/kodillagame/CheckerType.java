@@ -2,6 +2,7 @@ package com.kodilla.kodillagame;
 
 import java.util.Arrays;
 
+
 public enum CheckerType {
     BLACK, WHITE, BLACK_KING, WHITE_KING, NONE;
 

@@ -6,6 +6,7 @@ import javafx.scene.layout.StackPane;
 
 import java.util.Objects;
 
+
 public class Checker extends StackPane {
 
     public Checker(CheckerType type) {

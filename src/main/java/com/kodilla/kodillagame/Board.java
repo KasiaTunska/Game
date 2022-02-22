@@ -34,6 +34,7 @@ public class Board {
     }
 
     public void setFigure(int row, int col, CheckerType checkerType) {
+
         board[row][col] = checkerType;
     }
 
@@ -65,7 +66,6 @@ public class Board {
         if (checkIfRightChecker(whosTurn, checkerType) && startRow != endRow) {
             if (checkIfMoveIsPossible(checkerType, startRow, startCol, endRow, endCol)) {
                 if (checkIfMoveIsAJump(checkerType, startRow, startCol, endRow, endCol)) {
-                    //TODO: tu jest do zmiany bo po skoku zawsze jest kolejny ruch
                     setFigure(endRow, endCol, checkerType);
                     setFigure(startRow, startCol, CheckerType.NONE);
                     setFigure(startRow + (endRow - startRow) / 2, startCol + (endCol - startCol) / 2, CheckerType.NONE);

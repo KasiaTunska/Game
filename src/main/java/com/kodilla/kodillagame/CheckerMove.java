@@ -1,5 +1,6 @@
 package com.kodilla.kodillagame;
 
+
 public class CheckerMove {
     int startRow, startCol, endRow, endCol;
 
