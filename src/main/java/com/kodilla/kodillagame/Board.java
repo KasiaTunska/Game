@@ -69,6 +69,7 @@ public class Board {
                     setFigure(endRow, endCol, checkerType);
                     setFigure(startRow, startCol, CheckerType.NONE);
                     setFigure(startRow + (endRow - startRow) / 2, startCol + (endCol - startCol) / 2, CheckerType.NONE);
+                    whosTurn = whosTurn.opposite();
                 } else {
                     setFigure(endRow, endCol, checkerType);
                     setFigure(startRow, startCol, CheckerType.NONE);
