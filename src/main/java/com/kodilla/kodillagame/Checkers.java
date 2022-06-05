@@ -261,6 +261,7 @@ public class Checkers extends Application {
         return grid;
     }
 
+
     private Checker makeChecker(CheckerType checkerType) {
         return new Checker(checkerType);
     }

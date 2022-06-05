@@ -9,6 +9,7 @@ import java.util.Objects;
 
 public class Checker extends StackPane {
 
+
     public Checker(CheckerType type) {
         if (type != CheckerType.NONE) {
             ImageView image;

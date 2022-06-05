@@ -43,6 +43,7 @@ public class Board {
         return board[row][col];
     }
 
+
     Player getWhosTurn() {
 
         return whosTurn;
@@ -55,9 +56,9 @@ public class Board {
 
     boolean checkIfRightChecker(Player whosTurn, CheckerType checkerType) {
         if (whosTurn == Player.USER) {
-            return checkerType == CheckerType.BLACK || checkerType == CheckerType.BLACK_KING;
-        } else {
             return checkerType == CheckerType.WHITE || checkerType == CheckerType.WHITE_KING;
+        } else {
+            return checkerType == CheckerType.BLACK || checkerType == CheckerType.BLACK_KING;
         }
     }
 
@@ -65,9 +66,106 @@ public class Board {
         CheckerType checkerType = getFigure(startRow, startCol);
         if (checkIfRightChecker(whosTurn, checkerType) && startRow != endRow) {
             if (checkIfMoveIsPossible(checkerType, startRow, startCol, endRow, endCol)) {
+                if(checkerType == CheckerType.BLACK_KING || checkerType == CheckerType.WHITE_KING)
+                {
+                    System.out.println("Bicie damka");
+                    //startrow = 5
+                    //startCol = 5
+
+                    //Pierwszy
+                    //endrow = 10
+                    //endCol = 10
+
+                    if(endRow > startRow && endCol > startCol)
+                    {
+                        System.out.println("Pierwszy");
+                        var tempCol = startCol;
+                        for (int row = startRow; row < endRow; row++)
+                        {
+                            System.out.println("row " + row + " tempCol " + tempCol);
+                            setFigure(row, tempCol, CheckerType.NONE);
+                            tempCol++;
+                            //5, 5
+                            //6, 6
+                            //7, 7
+                        }
+                    }
+
+                    //Drugi
+                    // endrow = 10
+                    //endCol = 0
+
+                    if(endRow > startRow && endCol < startCol)
+                    {
+                        System.out.println("Drugi");
+                        var tempCol = startCol; // 5
+                        for (int row = startRow; row < endRow; row++)
+                        {
+                            System.out.println("row " + row + " tempCol " + tempCol);
+                            setFigure(row, tempCol, CheckerType.NONE);
+                            tempCol--;
+                            //5, 5
+                            //6, 4
+                            //7, 3
+                            //8, 2
+                            //9, 1
+                            //10, 0
+                        }
+                    }
+                    //Trzeci
+                    //endrow = 0
+                    //endCol = 10
+
+                    if(startRow > endRow && endCol > startCol)
+                    {
+                        System.out.println("Trzeci");
+                        var tempRow = startRow; // 5
+                        for (int col = startCol; col < endCol; col++)
+                        {
+                            System.out.println("tempRow " + tempRow + " col " + col);
+                            setFigure(tempRow, col, CheckerType.NONE);
+                            tempRow--;
+                            //5, 5
+                            //4, 6
+                            //3, 7
+                            //2, 8
+                            //1, 9
+                            //0, 10
+                        }
+                    }
+
+                    //Czwarty
+                    //endrow = 0
+                    //endCol = 0
+
+                    if(startRow > endRow && startCol > endCol)
+                    {
+                        System.out.println("Czwarty");
+                        var tempRow = startRow; // 5
+                        for (int col = startCol; endCol < col; col--)
+                        {
+                            System.out.println("tempRow " + tempRow + " col " + col);
+                            setFigure(tempRow, col, CheckerType.NONE);
+                            tempRow--;
+                            //5, 5
+                            //4, 4
+                            //3, 3
+                            //2, 2
+                            //1, 1
+                            //0, 0
+                        }
+                    }
+
+
+                    System.out.println("startRow " + startRow);
+                    System.out.println("endRow " + endRow);
+                    System.out.println("startCol " + startCol);
+                    System.out.println("endCol " + endCol);
+                }
                 if (checkIfMoveIsAJump(checkerType, startRow, startCol, endRow, endCol)) {
                     setFigure(endRow, endCol, checkerType);
                     setFigure(startRow, startCol, CheckerType.NONE);
+
                     setFigure(startRow + (endRow - startRow) / 2, startCol + (endCol - startCol) / 2, CheckerType.NONE);
                     whosTurn = whosTurn.opposite();
                 } else {
@@ -95,7 +193,12 @@ public class Board {
             int endCol;
             int startRow;
             int startCol;
-            while ((getAllMovableCheckers(getWhosTurn()).get("Jump moves").size() > 0)) {
+
+            var test = getAllMovableCheckers(getWhosTurn()).get("Jump moves");
+            System.out.println("TEST");
+            System.out.println(test);
+            System.out.println("TEST");
+            if ((getAllMovableCheckers(getWhosTurn()).get("Jump moves").size() > 0)) {
                 computerMove = getAllMovableCheckers(getWhosTurn()).get("Jump moves").get(rand.nextInt(getAllMovableCheckers(getWhosTurn()).get("Jump moves").size()));
                 startRow = computerMove.getStartRow();
                 startCol = computerMove.getStartCol();
